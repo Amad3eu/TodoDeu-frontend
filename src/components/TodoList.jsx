@@ -61,14 +61,15 @@ export default function TodoList({ todos = [], setTodos }) {
   const renderListItem = (t) => {
     let priorityLabel = "";
     let chipColor = "";
-    if (t.priority === 1) {
-      priorityLabel = "Low";
+
+    if (t.priority >= 0 && t.priority <= 4) {
+      priorityLabel = "Baixa";
       chipColor = "success";
-    } else if (t.priority === 2) {
-      priorityLabel = "Medium";
+    } else if (t.priority >= 5 && t.priority <= 7) {
+      priorityLabel = "Média";
       chipColor = "warning";
     } else {
-      priorityLabel = "High";
+      priorityLabel = "Alta";
       chipColor = "error";
     }
 

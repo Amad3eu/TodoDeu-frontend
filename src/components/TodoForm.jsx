@@ -71,7 +71,7 @@ export default function TodoForm({ todos, setTodos }) {
         sx={{ marginRight: "0.5rem" }}
       />
       <Button type="submit" variant="contained">
-        Adcionar
+        Adicionar
       </Button>
     </Box>
   );
